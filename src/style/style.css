@@ -11,3 +11,25 @@
 .card:hover {
     transform: scale(1.1);
 }
+
+.swiper {
+  width: 100%;
+  max-width: 800px; /* Ajuste o tamanho máximo do carrossel */
+  height: 700px;
+  margin: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide .max-w-lg {
+  margin: auto;
+}
+
+.max-w-lg {
+  max-width: 300px; /* Ajuste o tamanho máximo do card */
+}
+
