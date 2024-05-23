@@ -33,3 +33,10 @@
   max-width: 300px; /* Ajuste o tamanho máximo do card */
 }
 
+#botao{
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+#botao:hover {
+  transform: scale(1.1);
+}
