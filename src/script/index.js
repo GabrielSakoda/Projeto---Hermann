@@ -14,3 +14,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+ScrollReveal().reveal('.card2', {
+  delay: 300,
+  distance: '50px',
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  interval: 100,
+});
+ScrollReveal().reveal('.container', {
+  delay: 300,
+  distance: '50px',
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  interval: 100,
+});
+
+ScrollReveal().reveal('.sobre', {
+  delay: 300,
+  distance: '50px',
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  interval: 100,
+});
+
+ScrollReveal().reveal('.inicio', {
+  delay: 300,
+  distance: '50px',
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  interval: 100,
+});
+
