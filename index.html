@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hermann</title>
     <link rel="stylesheet" href="src/style/input.css" />
     <link rel="stylesheet" href="src/style/output.css"/>
@@ -16,142 +16,185 @@
 />
 </head>
 <body>
-  <header class='flex shadow-md py-4 px-4 sm:px-10 bg-black font-lexend-giga min-h-[80px] tracking-wide relative z-50'>
-    <div class='flex flex-wrap items-center gap-2 w-full'>
-      <h1 class="text-gray-50 text-bold text-2xl sm:text-5xl md:text-6xl font-lexend-giga text-center absolute">Hermann</h1>
-      <div id="collapseMenu"
-        class='max-lg:hidden lg:!flex lg:ml-auto max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
-        <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
-            <path
-              d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-              data-original="#000000"></path>
-            <path
-              d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-              data-original="#000000"></path>
-          </svg>
+  <nav class="bg-black relative z-10">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <h1 class="text-gray-50 text-bold text-2xl sm:text-5xl md:text-6xl font-lexend-giga text-center">Hermann</h1>
+        <button id="hamburger-btn" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
         </button>
-          <ul
-          class='lg:flex gap-4 max-lg:space-y-3 max-lg:fixed max-lg:bg-black max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
-          <li class='mb-6 hidden max-lg:block'>
-            <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" class='w-40' />
-            </a>
-          </li>
-          <li class='max-lg:border-b max-lg:py-3 px-3'>
-            <a href='javascript:void(0)'
-              class='hover:text-[#007bff] text-[#007bff] font-semibold block text-[15px]'>Início</a>
-          </li>
-          <li class='group max-lg:border-b max-lg:py-3 relative'>
-            <a href='javascript:void(0)'
-              class='hover:text-[#007bff] text-gray-50 text-[15px] font-bold lg:hover:fill-[#007bff] block'>Marcas<svg
-                xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class="ml-1 inline-block"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
-                  data-name="16" data-original="#000000" fill="white"/>
-              </svg>
-            </a>
-            <ul
-              class='absolute shadow-lg bg-black space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
-              <li class='border-b py-2 '><a href='javascript:void(0)'
-                  class='hover:text-[#007bff] text-gray-50 text-[15px] font-bold block'>About</a></li>
-              <li class='border-b py-2 '><a href='javascript:void(0)'
-                  class='hover:text-[#007bff] text-gray-50 text-[15px] font-bold block'>Contact</a></li>
-              <li class='border-b py-2 '><a href='javascript:void(0)'
-                  class='hover:text-[#007bff] text-gray-50 text-[15px] font-bold block'>Login</a></li>
-              <li class='border-b py-2 '><a href='javascript:void(0)'
-                  class='hover:text-[#007bff] text-gray-50 text-[15px] font-bold block'>Sign up</a></li>
-              <li class='border-b py-2 '><a href='javascript:void(0)'
-                  class='hover:text-[#007bff] text-gray-50 text-[15px] font-bold block'>Blog</a></li>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Início</a></li>
+                <li class="relative group">
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="font-lexend-giga flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Marcas
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div class='absolute shadow-lg bg-black top-full left-0 w-full z-50 max-h-0 overflow-y-auto group-hover:opacity-100 group-hover:max-h-[350px] group-hover:h-auto transition-all duration-500 flex flex-col items-center'
+                        style="touch-action: pan-y;">
+                        <a href="pagina-da-ferrari.html">
+                            <img src="src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-mercedes.html">
+                            <img src="src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-porsche.html">
+                            <img src="src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-lamborghini.html">
+                            <img src="src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-audi.html">
+                            <img src="src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-bmw.html">
+                            <img src="src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
+                        </a>
+                    </div>
+                </li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Serviços & Manutenções</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre a loja</a></li>
             </ul>
-          </li>
-          <li class='max-lg:border-b max-lg:py-3 px-3'><a href='modelo.html'
-              class='hover:text-[#007bff] text-gray-50 font-semibold block text-[15px]'>Serviços & Manutenção</a>
-          </li>
-          <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-              class='hover:text-[#007bff] text-gray-50 font-semibold block text-[15px]'>Contato</a>
-          </li>
-          <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-              class='hover:text-[#007bff] text-gray-50 font-semibold block text-[15px]'>Sobre a loja</a>
-          </li>
-        </ul>
-      </div>
+        </div>
+        <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
     </div>
-  </header>
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black text-white sidebar hidden">
+        <div class="p-4">
+            <h2 class="text-2xl font-bold">Menu</h2>
+            <ul class="mt-4 space-y-2">
+                <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded text-2xl font-lexend-giga text-white">Início</a></li>
+                <li class="relative group">
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-lexend-giga">Marcas
+                      <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                      </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div class='absolute shadow-lg bg-black top-full left-0 w-full z-50 max-h-0 overflow-y-auto group-hover:opacity-100 group-hover:max-h-[350px] group-hover:h-auto transition-all duration-500 flex flex-col items-center'
+                  style="touch-action: pan-y;">
+                  <a href="pagina-da-ferrari.html">
+                      <img src="src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-mercedes.html">
+                      <img src="src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-porsche.html">
+                      <img src="src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-lamborghini.html">
+                      <img src="src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-audi.html">
+                      <img src="src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-bmw.html">
+                      <img src="src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
+                  </a>
+              </li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Serviços & Manutenções</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Contato</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Sobre a loja</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
     <main id="container" class="">
       <div class="relative bg-black">
         <video class="w-full h-auto object-cover opacity-40" autoplay loop muted>
             <source src="/src/content/video-fundo.mp4" type="video/mp4">
         </video>
         <div class="absolute bottom-0 left-0 mb-28 p-4">
-            <h1 class="text-white text-left text-7xl font-light font-lexend-giga max-w-[660px]">O luxo da emoção, a precisão da performance</h1>
+            
         </div>
-    </div>
-    </div>
-        <section id="sobre">
-            <div class="flex justify-center items-center mt-20">
-                <img src="src/content/logo.png" alt="logo hermann">
+       </div>
+       <section id="sobre">
+        <div class="flex justify-center items-center mt-20">
+            <img src="src/content/logo.png" alt="logo hermann">
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <div class="relative card2">
+                <img src="src/content/numero1.png" alt="Sobre">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-xl">
+                    Conheça a número um do mercado <i class="fas fa-arrow-right"></i>
+                </h2>
             </div>
-            <div class="flex justify-center items-center">
-                <p class="font-lexend-giga text-xl text-center max-w-6xl">A Hermann redefine a experiência de possuir carros de luxo, oferecendo uma seleção exclusiva das marcas mais prestigiadas. Com uma abordagem personalizada, garante uma experiência única desde o showroom até a compra. Expandindo suas operações e introduzindo uma plataforma online, a Hermann investe em sustentabilidade com veículos elétricos e híbridos, além de promover eventos exclusivos e parcerias estratégicas. Hoje, a Hermann é sinônimo de excelência, inovação e qualidade, solidificando-se como líder no mercado de automóveis de luxo.</p>
+            <div class="relative card2">
+                <img src="src/content/serviços.png" alt="Serviços">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-xl">
+                    Os melhores serviços <i class="fas fa-arrow-right"></i>
+                </h2>
             </div>
-        </section>
-        <section id="modelos">
-            <div class="flex justify-center items-center mt-14">
-              <h1 class="font-lexend-giga text-4xl font-light">Marcas</h1>
+            <div class="relative card2">
+                <img src="src/content/corretores.png" alt="Corretores">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-xl">
+                    Agende com os melhores corretores <i class="fas fa-arrow-right"></i>
+                </h2>
             </div>
-            <div class="flex items-center justify-center space-x-16 mt-12">
-              <div id="ferrari">
-                <img src="src/content/ferrari-logo.svg" alt="ferrari">
-              </div>
-              <div id="mercedes">
-                <img src="src/content/mercedes-logo.svg" alt="mercedes">
-              </div>
-              <div id="porsche">
-                <img src="src/content/porsche-logo.svg" alt="porsche">
-              </div>
-              <div id="lamborghini">
-                <img src="src/content/lamborghini-logo.svg" alt="lamborghini">
-              </div>
-              <div id="audi">
-                <img src="src/content/audi-logo.svg" alt="audi">
-              </div>
-              <div id="bmw">
-                <img src="src/content/bmw-logo.svg" alt="bmw">
-              </div>
-            </div>
-            <div class="border-b border-black"></div>
-        </section>
-        <div class="grid grid-cols-3 gap-4 justify-center mx-auto max-w-[960px] relative mt-16">
+        </div>
+    </section>
+    <section id="modelos">
+      <div class="flex justify-center items-center mt-14">
+          <h1 class="font-lexend-giga text-4xl font-light">Marcas</h1>
+      </div>
+      <div class="flex flex-wrap items-center justify-center space-x-0 space-y-4 sm:space-x-8 sm:space-y-0 mt-12">
+          <div id="ferrari" class="flex justify-center w-1/2 sm:w-auto">
+              <img src="src/content/ferrari-logo.svg" alt="ferrari" class="max-w-full h-auto">
+          </div>
+          <div id="mercedes" class="flex justify-center w-1/2 sm:w-auto">
+              <img src="src/content/mercedes-logo.svg" alt="mercedes" class="max-w-full h-auto">
+          </div>
+          <div id="porsche" class="flex justify-center w-1/2 sm:w-auto">
+              <img src="src/content/porsche-logo.svg" alt="porsche" class="max-w-full h-auto">
+          </div>
+          <div id="lamborghini" class="flex justify-center w-1/2 sm:w-auto">
+              <img src="src/content/lamborghini-logo.svg" alt="lamborghini" class="max-w-full h-auto">
+          </div>
+          <div id="audi" class="flex justify-center w-1/2 sm:w-auto">
+              <img src="src/content/audi-logo.svg" alt="audi" class="max-w-full h-auto">
+          </div>
+          <div id="bmw" class="flex justify-center w-1/2 sm:w-auto">
+              <img src="src/content/bmw-logo.svg" alt="bmw" class="max-w-full h-auto">
+          </div>
+      </div>
+      <div class="border-b border-black mt-8"></div>
+    </section>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mx-auto max-w-[960px] relative mt-16">
           <!-- Linha 1 -->
-          <div class="w-[287px] max-w-[287px] mt-4 relative card cursor-pointer">
+          <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer">
               <img src="src/content/911.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
               <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">911</h2>
           </div>
-          <div class="w-[287px] max-w-[287px] mt-4 relative card cursor-pointer">
+          <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer">
               <img src="src/content/huracan.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
               <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">Huracan</h2>
           </div>
-          <div class="w-[287px] max-w-[287px] mt-4 relative card cursor-pointer">
+          <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer">
               <img src="src/content/c63.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
               <h2 class="text-center absolute bottom-0 left-0 right-0  text-white text-bold font-lexend-giga text-3xl">C63</h2>
           </div>
-        
+          
           <!-- Linha 2 -->
-          <div class="w-[287px] max-w-[287px] mt-4 relative card cursor-pointer">
+          <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer">
               <img src="src/content/m3.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
               <h2 class="text-center absolute bottom-0 left-0 right-0  text-white text-bold font-lexend-giga text-3xl">M3</h2>
           </div>
-          <div class="w-[287px] max-w-[287px] mt-4 relative card cursor-pointer">
+          <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer">
               <img src="src/content/488.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
               <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">488</h2>
           </div>
-          <div class="w-[287px] max-w-[287px] mt-4 relative card cursor-pointer">
+          <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer">
               <img src="src/content/r8.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
               <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">R8</h2>
           </div>
-      </div>
-      <section id="blog">
+        </div>
+     <section id="blog">
         <div class="bg-[#354C50] w-full mt-20 justify-center items-center flex flex-col md:flex-row">
           <!-- Slider main container -->
           <div class="swiper">
@@ -160,7 +203,7 @@
               <!-- Slides -->
               <div class="swiper-slide">
                 <div class="flex justify-center items-center h-full">
-                  <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm w-full">
+                  <div class="bg-white shado w-md border border-gray-200 rounded-lg max-w-sm w-full">
                     <a href="#">
                       <img class="rounded-t-lg" src="src/content/evolucao-porsche.svg" alt="">
                     </a>
@@ -233,48 +276,60 @@
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
           </div>      
-          <div class=" text-center md:text-left">
+          <div class="text-center md:text-left">
+            <div class="flex flex-col md:items-start items-center">
               <h1 class="font-lexend-giga font-bold text-4xl text-white mb-5">FIQUE POR DENTRO DAS NOVIDADES!</h1>
-              <p class="font-lexend-giga text-xl text-white md:mb-0 text-center max-w-[550px] mt-11">RECEBA NOVIDADS EM SEU E-MAIL</p>
-              
+              <p class="font-lexend-giga text-xl text-white md:mb-0 max-w-[550px]">RECEBA NOVIDADES EM SEU E-MAIL</p>
+              <form class="w-full max-w-lg mt-5 flex">
+                <div class="relative flex-grow">
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                      <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                      <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                    </svg>
+                  </div>
+                  <input type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-3 dark:bg-white dark:placeholder-gray-400 dark:text-gray-700 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite seu e-mail">
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500">Enviar</button>
+              </form>
+            </div>
           </div>
         </div>      
       </section> 
-      <!-Seção Sobre a Empresa e Localização->
-      <section id="sobre" class="bg-gray-900 w-full mt-24 h-[412px]">
-        <div class="flex flex-col md:flex-row justify-around items-start md:gap-56 p-4 h-full">
-          <div id="empresa" class="w-full md:w-1/2 h-full flex flex-col justify-center">
-            <h1 class="font-lexend-giga font-bold text-white text-2xl mb-4 text-center">SOBRE A EMPRESA</h1>
-            <p class="font-lexend-giga text-white text-center">
+      <section id="sobre" class="bg-gray-900 w-full mt-24 pb-16 md:pb-24 "> <!-- Ajuste a altura mínima da tela -->
+        <div class="flex flex-col md:flex-row justify-around items-start gap-4 p-4 h-full">
+          <div id="empresa" class="w-full md:w-1/2 flex flex-col justify-center">
+            <h1 class="font-lexend-giga font-bold text-white text-2xl md:text-3xl mb-4 text-center">SOBRE A EMPRESA</h1>
+            <p class="font-lexend-giga text-white text-center text-lg mt-6">
               A Hermann redefine a experiência de possuir carros de luxo, oferecendo uma seleção exclusiva das marcas mais prestigiadas. Com uma abordagem personalizada e uma plataforma online inovadora, garante uma experiência única do showroom à compra, destacando-se pela excelência, inovação e qualidade.
             </p>
           </div>
-          <div id="localizacao" class="w-full md:w-1/2 h-full flex flex-col justify-center">
-            <h1 class="font-lexend-giga font-bold text-white text-2xl text-center">ENCONTRE A HERMANN MAIS PRÓXIMA DE VOCÊ</h1>
+          <div id="localizacao" class="w-full md:w-1/2 flex flex-col justify-center">
+            <h1 class="font-lexend-giga font-bold text-white text-2xl md:text-3xl text-center">ENCONTRE A HERMANN MAIS PRÓXIMA DE VOCÊ</h1>
             <div id="descricao" class="mt-4">
-              <p class="font-lexend-giga text-white text-center">
+              <p class="font-lexend-giga text-white text-center text-lg">
                 Hermann oferece um atendimento especializado por todo o território nacional. Seu carro dos sonhos perto de você.
               </p>
               <!-- Adicionando Pesquisa -->
-              <form class="mt-4">   
-                <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+              <form class="max-w-md mx-auto mt-6">   
+                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div class="relative">
-                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                    </svg>
-                  </div>
-                  <input type="search" id="search" class="block w-full p-4 pl-10 pr-20 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite seu CPF" required />
-                  <button type="submit" class="text-white absolute right-2.5 top-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Procurar</button>
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Digite seu CEP" required />
+                    <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Procurar</button>
                 </div>
               </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <!-Seção do Footer!->
-      <div class="flex flex-col items-end w-full">
-        <footer class="w-full text-gray-700 bg-black body-font relative">
+      <!--Seção do Footer!-->
+      <div class="sm:mt-40 md:mt-0 flex flex-col items-end w-full text-gray-700 bg-black body-font">
           <div
             class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap text-white">
             <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
@@ -357,16 +412,16 @@
             </div>
           </div>
           <!-- Linha adicional para "Desenvolvido por CoretTech" -->
-          <div class="absolute bottom-0 right-0 p-4 flex items-center">
+          <div class="bottom-0 right-0 p-4 flex items-center">
             <p class="text-base text-slate-200 font-lexend-giga mr-2">Desenvolvido por</p>
             <img src="src/content/coretech-logo.svg" alt="CoreTech Logo" class="h-15">
           </div>
-        </footer>
       </div>      
     </main>
 <script src="src/script/index.js"></script>
 <script src="node_modules/swiper/swiper-bundle.min.js"></script>
 <script src="src/script/carrossel.js"></script>
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+<script src="https://kit.fontawesome.com/c2b79f7247.js" crossorigin="anonymous"></script>
 </body>
 </html>

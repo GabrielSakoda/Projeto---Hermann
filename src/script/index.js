@@ -1,14 +1,16 @@
-var toggleOpen = document.getElementById('toggleOpen');
-var toggleClose = document.getElementById('toggleClose');
-var collapseMenu = document.getElementById('collapseMenu');
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
 
-function handleClick() {
-  if (collapseMenu.style.display === 'block') {
-    collapseMenu.style.display = 'none';
-  } else {
-    collapseMenu.style.display = 'block';
-  }
-}
+  hamburgerBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('hidden');
+      overlay.classList.toggle('hidden');
+  });
 
-toggleOpen.addEventListener('click', handleClick);
-toggleClose.addEventListener('click', handleClick);
+  overlay.addEventListener('click', () => {
+      sidebar.classList.add('hidden');
+      overlay.classList.add('hidden');
+  });
+});
+
