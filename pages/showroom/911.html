@@ -166,89 +166,89 @@
             <model-viewer src="/src/models/porsche_911_turbo_s.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls style="width: 1440px; height: 500px; border-radius: 25px;" class="bg-black"></model-viewer>
         </div>
     </section>
-    <!-- Galeria das imagens do Carro-->
-    <section>
-      <div class="flex justify-center items-center mt-14 inicio">
-        <h1 class="font-lexend-giga text-4xl font-bold">Galeria</h1>
-      </div>
-      <div x-data="{
-        imageGalleryOpened: false,
-        imageGalleryActiveUrl: null,
-        imageGalleryImageIndex: null,
-        imageGalleryOpen(event) {
-            this.imageGalleryImageIndex = event.target.dataset.index;
-            this.imageGalleryActiveUrl = event.target.src;
-            this.imageGalleryOpened = true;
-        },
-        imageGalleryClose() {
-            this.imageGalleryOpened = false;
-            setTimeout(() => this.imageGalleryActiveUrl = null, 300);
-        },
-        imageGalleryNext() {
-            this.imageGalleryImageIndex = (parseInt(this.imageGalleryImageIndex) % this.$refs.gallery.querySelectorAll('img').length) + 1;
-            this.imageGalleryActiveUrl = this.$refs.gallery.querySelector('[data-index=\'' + this.imageGalleryImageIndex + '\']').src;
-        },
-        imageGalleryPrev() {
-            this.imageGalleryImageIndex = (parseInt(this.imageGalleryImageIndex) - 1) || this.$refs.gallery.querySelectorAll('img').length;
-            this.imageGalleryActiveUrl = this.$refs.gallery.querySelector('[data-index=\'' + this.imageGalleryImageIndex + '\']').src;
-        }
-    }" 
-    @image-gallery-next.window="imageGalleryNext()" 
-    @image-gallery-prev.window="imageGalleryPrev()" 
-    @keyup.right.window="imageGalleryNext();" 
-    @keyup.left.window="imageGalleryPrev();" 
-    x-init="
-        imageGalleryPhotos = $refs.gallery.querySelectorAll('img');
-        for(let i = 0; i < imageGalleryPhotos.length; i++) {
-            imageGalleryPhotos[i].setAttribute('data-index', i + 1);
-        }
-    " class="w-full h-full select-none">
-    
-    <div class="container mx-auto px-5 py-2 lg:px-32 lg:mt-5" x-ref="gallery">
-        <div class="-m-1 flex flex-wrap md:-m-2">
-            <div class="flex w-1/2 flex-wrap">
-                <div class="w-1/2 p-1 md:p-2">
-                    <img x-on:click="imageGalleryOpen" data-index="1" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche1.png" />
+       <!-- Galeria das imagens do Carro-->
+       <section>
+        <div class="flex justify-center items-center mt-14 inicio">
+            <h1 class="font-lexend-giga text-4xl font-bold">Galeria</h1>
+        </div>
+        <div x-data="{
+            imageGalleryOpened: false,
+            imageGalleryActiveUrl: null,
+            imageGalleryImageIndex: null,
+            imageGalleryOpen(event) {
+                this.imageGalleryImageIndex = event.target.dataset.index;
+                this.imageGalleryActiveUrl = event.target.src;
+                this.imageGalleryOpened = true;
+            },
+            imageGalleryClose() {
+                this.imageGalleryOpened = false;
+                setTimeout(() => this.imageGalleryActiveUrl = null, 300);
+            },
+            imageGalleryNext() {
+                this.imageGalleryImageIndex = (parseInt(this.imageGalleryImageIndex) % this.$refs.gallery.querySelectorAll('img').length) + 1;
+                this.imageGalleryActiveUrl = this.$refs.gallery.querySelector('[data-index=\'' + this.imageGalleryImageIndex + '\']').src;
+            },
+            imageGalleryPrev() {
+                this.imageGalleryImageIndex = (parseInt(this.imageGalleryImageIndex) - 1) || this.$refs.gallery.querySelectorAll('img').length;
+                this.imageGalleryActiveUrl = this.$refs.gallery.querySelector('[data-index=\'' + this.imageGalleryImageIndex + '\']').src;
+            }
+        }" 
+        @image-gallery-next.window="imageGalleryNext()" 
+        @image-gallery-prev.window="imageGalleryPrev()" 
+        @keyup.right.window="imageGalleryNext();" 
+        @keyup.left.window="imageGalleryPrev();" 
+        x-init="
+            imageGalleryPhotos = $refs.gallery.querySelectorAll('img');
+            for(let i = 0; i < imageGalleryPhotos.length; i++) {
+                imageGalleryPhotos[i].setAttribute('data-index', i + 1);
+            }
+        " class="w-full h-full select-none">
+        
+        <div class="container mx-auto px-2 sm:px-5 py-2 lg:px-10 lg:mt-5" x-ref="gallery">
+            <div class="-m-1 flex flex-wrap md:-m-2">
+                <div class="flex w-full md:w-1/2 flex-wrap">
+                    <div class="w-1/2 p-1 sm:p-2">
+                        <img x-on:click="imageGalleryOpen" data-index="1" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche1.png" />
+                    </div>
+                    <div class="w-1/2 p-1 sm:p-2">
+                        <img x-on:click="imageGalleryOpen" data-index="2" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche2.png" />
+                    </div>
+                    <div class="w-full p-1 sm:p-2">
+                        <img x-on:click="imageGalleryOpen" data-index="3" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche3.png" />
+                    </div>
                 </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img x-on:click="imageGalleryOpen" data-index="2" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche2.png" />
-                </div>
-                <div class="w-full p-1 md:p-2">
-                    <img x-on:click="imageGalleryOpen" data-index="3" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche3.png" />
-                </div>
-            </div>
-            <div class="flex w-1/2 flex-wrap">
-                <div class="w-full p-1 md:p-2">
-                    <img x-on:click="imageGalleryOpen" data-index="4" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche4.png" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img x-on:click="imageGalleryOpen" data-index="5" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche5.png" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img x-on:click="imageGalleryOpen" data-index="6" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche6.png" />
+                <div class="flex w-full md:w-1/2 flex-wrap">
+                    <div class="w-full p-1 sm:p-2">
+                        <img x-on:click="imageGalleryOpen" data-index="4" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche4.png" />
+                    </div>
+                    <div class="w-1/2 p-1 sm:p-2">
+                        <img x-on:click="imageGalleryOpen" data-index="5" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche5.png" />
+                    </div>
+                    <div class="w-1/2 p-1 sm:p-2">
+                        <img x-on:click="imageGalleryOpen" data-index="6" alt="gallery" class="block h-full w-full rounded-lg object-cover object-center cursor-zoom-in" src="src/gallery/911/porsche6.png" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <template x-teleport="body">
-        <div x-show="imageGalleryOpened" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:leave="transition ease-in-in duration-300" x-transition:leave-end="opacity-0" @click="imageGalleryClose" @keydown.window.escape="imageGalleryClose" x-trap.inert.noscroll="imageGalleryOpened" class="fixed inset-0 z-[99] flex items-center justify-center bg-black bg-opacity-50 select-none cursor-zoom-out" x-cloak>
-            <div class="relative flex items-center justify-center w-11/12 xl:w-4/5 h-11/12">
-                <div @click.stop="imageGalleryPrev" class="absolute left-0 flex items-center justify-center text-white translate-x-10 rounded-full cursor-pointer xl:-translate-x-24 2xl:-translate-x-32 bg-white/10 w-14 h-14 hover:bg-white/20">
-                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-                </div>
-                <img x-show="imageGalleryOpened" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0 transform scale-50" x-transition:leave="transition ease-in-in duration-300" x-transition:leave-end="opacity-0 transform scale-50" class="object-contain object-center w-full h-full select-none cursor-zoom-out" :src="imageGalleryActiveUrl" alt="">
-                <div @click.stop="imageGalleryNext" class="absolute right-0 flex items-center justify-center text-white -translate-x-10 rounded-full cursor-pointer xl:translate-x-24 2xl:translate-x-32 bg-white/10 w-14 h-14 hover:bg-white/20">
-                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
+        
+        <template x-teleport="body">
+            <div x-show="imageGalleryOpened" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:leave="transition ease-in-in duration-300" x-transition:leave-end="opacity-0" @click="imageGalleryClose" @keydown.window.escape="imageGalleryClose" x-trap.inert.noscroll="imageGalleryOpened" class="fixed inset-0 z-[99] flex items-center justify-center bg-black bg-opacity-50 select-none cursor-zoom-out" x-cloak>
+                <div class="relative flex items-center justify-center w-11/12 sm:w-full h-11/12">
+                    <div @click.stop="imageGalleryPrev" class="absolute left-0 flex items-center justify-center text-white translate-x-5 sm:translate-x-10 rounded-full cursor-pointer sm:translate-x-24 lg:-translate-x-32 bg-white/10 w-10 sm:w-14 h-10 sm:h-14 hover:bg-white/20">
+                        <svg class="w-4 sm:w-6 h-4 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </div>
+                    <img x-show="imageGalleryOpened" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0 transform scale-50" x-transition:leave="transition ease-in-in duration-300" x-transition:leave-end="opacity-0 transform scale-50" class="object-contain object-center w-full h-full select-none cursor-zoom-out" :src="imageGalleryActiveUrl" alt="">
+                    <div @click.stop="imageGalleryNext" class="absolute right-0 flex items-center justify-center text-white -translate-x-5 sm:translate-x-10 rounded-full cursor-pointer sm:translate-x-24 lg:translate-x-32 bg-white/10 w-10 sm:w-14 h-10 sm:h-14 hover:bg-white/20">
+                        <svg class="w-4 sm:w-6 h-4 sm:h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </div>
                 </div>
             </div>
+        </template>
         </div>
-    </template>
-    </section>
     <section id="sobre" class="bg-gray-900 w-full mt-24 md:pb-12"> <!-- Ajuste a altura mínima da tela -->
       <div class="flex flex-col md:flex-row justify-around items-start gap-16 p-2 h-full sobre">
         <div id="empresa" class="w-full md:w-1/2 flex flex-col justify-center">
