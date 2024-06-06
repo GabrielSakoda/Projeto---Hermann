@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hermann</title>
+    <link rel="stylesheet" href="src/style/input.css" />
+    <link rel="stylesheet" href="src/style/output.css"/>
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="node_modules/swiper/swiper-bundle.min.css"
+/>
+</head>
+<body>
+  <nav class="bg-black relative z-10">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <h1 class="text-gray-50 text-bold text-2xl sm:text-5xl md:text-6xl font-lexend-giga text-center">Hermann</h1>
+        <button id="hamburger-btn" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Início</a></li>
+                <li class="relative group">
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="font-lexend-giga flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Marcas
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div class='absolute shadow-lg bg-black top-full left-0 w-full z-50 max-h-0 overflow-y-auto group-hover:opacity-100 group-hover:max-h-[350px] group-hover:h-auto transition-all duration-500 flex flex-col items-center'
+                        style="touch-action: pan-y;">
+                        <a href="pagina-da-ferrari.html">
+                            <img src="src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-mercedes.html">
+                            <img src="src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pages/brands/porsche.html">
+                            <img src="src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-lamborghini.html">
+                            <img src="src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-audi.html">
+                            <img src="src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-bmw.html">
+                            <img src="src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
+                        </a>
+                    </div>
+                </li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Serviços & Manutenções</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre a loja</a></li>
+            </ul>
+        </div>
+        <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+    </div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black text-white sidebar hidden">
+        <div class="p-4">
+            <h2 class="text-2xl font-bold">Menu</h2>
+            <ul class="mt-4 space-y-2">
+                <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded text-2xl font-lexend-giga text-white">Início</a></li>
+                <li class="relative group">
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-lexend-giga">Marcas
+                      <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                      </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div class='absolute shadow-lg bg-black top-full left-0 w-full z-50 max-h-0 overflow-y-auto group-hover:opacity-100 group-hover:max-h-[350px] group-hover:h-auto transition-all duration-500 flex flex-col items-center'
+                  style="touch-action: pan-y;">
+                  <a href="pagina-da-ferrari.html">
+                      <img src="src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-mercedes.html">
+                      <img src="src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-porsche.html">
+                      <img src="src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-lamborghini.html">
+                      <img src="src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-audi.html">
+                      <img src="src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-bmw.html">
+                      <img src="src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
+                  </a>
+              </li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Serviços & Manutenções</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Contato</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Sobre a loja</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <main id="container">
+      <div class="relative bg-black">
+        <video class="w-full h-auto object-cover opacity-40" autoplay loop muted>
+            <source src="/src/content/video-fundo.mp4" type="video/mp4">
+        </video>
+        <div class="absolute bottom-0 left-0 mb-28 p-4">
+        </div>
+       </div>
+       <section id="sobre">
+        <div class="flex justify-center items-center mt-20 inicio">
+            <img src="src/content/logo.png" alt="logo hermann">
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 inicio">
+            <div class="relative efeito">
+                <img src="src/content/numero-um.png" alt="Sobre">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-xl">
+                    Conheça a número um do mercado <i class="fas fa-arrow-right"></i>
+                </h2>
+            </div>
+            <div class="relative efeito">
+                <img src="src/content/serviços.png" alt="Serviços">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-xl">
+                    Os melhores serviços <i class="fas fa-arrow-right"></i>
+                </h2>
+            </div>
+            <div class="relative efeito">
+                <img src="src/content/corretores.png" alt="Corretores">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-xl">
+                    Agende com os melhores corretores <i class="fas fa-arrow-right"></i>
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section id="modelos">
+      <div class="flex justify-center items-center mt-14 inicio">
+        <h1 class="font-lexend-giga text-4xl font-light">Marcas</h1>
+      </div>
+      <div class="flex flex-wrap items-center justify-center space-x-0 space-y-4 sm:space-x-8 sm:space-y-0 mt-12 inicio">
+        <div id="ferrari" class="flex justify-center w-1/2 sm:w-auto">
+          <a href="pages/brands/"><img src="src/content/ferrari-logo.svg" alt="ferrari" class="max-w-full h-auto"></a>
+        </div>
+        <div id="mercedes" class="flex justify-center w-1/2 sm:w-auto">
+          <a href="/mercedes"><img src="src/content/mercedes-logo.svg" alt="mercedes" class="max-w-full h-auto"></a>
+        </div>
+        <div id="porsche" class="flex justify-center w-1/2 sm:w-auto">
+          <a href="pages/brands/porsche.html"><img src="src/content/porsche-logo.svg" alt="porsche" class="max-w-full h-auto"></a>
+        </div>
+        <div id="lamborghini" class="flex justify-center w-1/2 sm:w-auto">
+          <a href="/lamborghini"><img src="src/content/lamborghini-logo.svg" alt="lamborghini" class="max-w-full h-auto"></a>
+        </div>
+        <div id="audi" class="flex justify-center w-1/2 sm:w-auto">
+          <a href="/audi"><img src="src/content/audi-logo.svg" alt="audi" class="max-w-full h-auto"></a>
+        </div>
+        <div id="bmw" class="flex justify-center w-1/2 sm:w-auto">
+          <a href="/bmw"><img src="src/content/bmw-logo.svg" alt="bmw" class="max-w-full h-auto"></a>
+        </div>
+      </div>
+      <div class="border-b border-black mt-8"></div>
+    </section>    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mx-auto max-w-[960px] relative mt-16">
+        <!-- Linha 1 -->
+        <a href="/pages/showroom/911.html" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative cursor-pointer inicio efeito2">
+            <img src="src/content/911.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+            <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">911</h2>
+        </a>
+        <a href="/huracan" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito2cursor-pointer inicio">
+            <img src="src/content/huracan.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+            <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">Huracan</h2>
+        </a>
+        <a href="/c63" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito2 cursor-pointer inicio">
+            <img src="src/content/c63.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+            <h2 class="text-center absolute bottom-0 left-0 right-0  text-white text-bold font-lexend-giga text-3xl">C63</h2>
+        </a>
+        
+        <!-- Linha 2 -->
+        <a href="/m3" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito2 cursor-pointer inicio">
+            <img src="src/content/m3.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+            <h2 class="text-center absolute bottom-0 left-0 right-0  text-white text-bold font-lexend-giga text-3xl">M3</h2>
+        </a>
+        <a href="/488" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito2 cursor-pointer inicio">
+            <img src="src/content/488.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+            <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">488</h2>
+        </a>
+        <a href="/r8" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito2 cursor-pointer inicio">
+            <img src="src/content/r8.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+            <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">R8</h2>
+        </a>
+      </div>
+     <section id="blog">
+        <div class="bg-[#354C50] w-full mt-20 justify-center items-center flex flex-col md:flex-row">
+          <!-- Slider main container -->
+          <div class="swiper inicio">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="flex justify-center items-center h-full">
+                  <div class="bg-white shado w-md border border-gray-200 rounded-lg max-w-sm w-full">
+                    <a href="#">
+                      <img class="rounded-t-lg" src="src/content/evolucao-porsche.svg" alt="">
+                    </a>
+                    <div class="p-5 flex flex-col justify-between h-full">
+                      <div>
+                        <a href="#">
+                          <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 font-lexend-giga">Evolução da Porsche</h5>
+                        </a>
+                        <p class="font-normal text-gray-700 mb-3 font-lexend-giga">Um dos modelos mais clássicos da montadora alemã já completou 50 anos de estrada e carrega sete gerações ao longo de sua história.</p>
+                      </div>
+                      <div>
+                        <a id="botao" class="text-white bg-black hover:bg-[#354C50] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center font-lexend-giga" href="#">
+                          Leia Mais
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex justify-center items-center h-full">
+                  <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm w-full">
+                    <a href="#">
+                      <img class="rounded-t-lg" src="src/content/bmw m4 cs.svg" alt="">
+                    </a>
+                    <div class="p-5 flex flex-col justify-between h-full">
+                      <div>
+                        <a href="#">
+                          <h5 class="text-gray-900 font-bold text-base tracking-tight mb-2 font-lexend-giga">BMW M4 CS é a nova versão com desempenho monstruoso</h5>
+                        </a>
+                        <p class="font-normal text-gray-700 mb-3 font-lexend-giga">Com a mesma potência da versão topo de linha CSL, o novo BMW M4 CS é mais barato e tem desempenho até melhor.</p>
+                      </div>
+                      <div>
+                        <a id="botao" class="text-white bg-black hover:bg-[#354C50] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center font-lexend-giga" href="#">
+                          Leia Mais
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex justify-center items-center h-full">
+                  <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm w-full">
+                    <a href="#">
+                      <img class="rounded-t-lg" src="src/content/lamborghini.svg" alt="">
+                    </a>
+                    <div class="p-5 flex flex-col justify-between h-full">
+                      <div>
+                        <a href="#">
+                          <h5 class="text-gray-900 font-bold text-base  tracking-tight mb-2 font-lexend-giga">Novo Lamborghini Revuelto </h5>
+                        </a>
+                        <p class="font-normal text-gray-700 mb-3 font-lexend-giga">Equipado com 4 motores, um V12 e 3 elétricos, e tecnologias para aumentar o desempenho e dinâmica, o Revuelto consegue superar seu antecessor, o Aventador.</p>
+                      </div>
+                      <div>
+                        <a id="botao" class="text-white bg-black hover:bg-[#354C50] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center font-lexend-giga" href="#">
+                          Leia Mais
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>      
+          <div class="text-center md:text-left inicio">
+            <div class="flex flex-col md:items-start items-center">
+              <h1 class="font-lexend-giga font-bold text-4xl text-white mb-5">FIQUE POR DENTRO DAS NOVIDADES!</h1>
+              <p class="font-lexend-giga text-xl text-white md:mb-0 max-w-[550px]">RECEBA NOVIDADES EM SEU E-MAIL</p>
+              <form class="w-full max-w-lg mt-5 flex">
+                <div class="relative flex-grow">
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                      <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                      <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                    </svg>
+                  </div>
+                  <input type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-3 dark:bg-white dark:placeholder-gray-400 dark:text-gray-700 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite seu e-mail">
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>      
+      </section> 
+      <section id="sobre" class="bg-gray-900 w-full mt-24 pb-16 md:pb-6"> <!-- Ajuste a altura mínima da tela -->
+        <div class="flex flex-col md:flex-row justify-around items-start gap-8 p-4 h-full sobre">
+          <div id="empresa" class="w-full md:w-1/2 flex flex-col justify-center">
+            <h1 class="font-lexend-giga font-bold text-white text-2xl md:text-3xl mb-4 text-center">SOBRE A EMPRESA</h1>
+            <p class="font-lexend-giga text-white text-center text-sm mt-4">
+              A Hermann redefine a experiência de possuir carros de luxo, oferecendo uma seleção exclusiva das marcas mais prestigiadas. Com uma abordagem personalizada e uma plataforma online inovadora, garante uma experiência única do showroom à compra, destacando-se pela excelência, inovação e qualidade.
+            </p>
+          </div>
+          <div id="localizacao" class="w-full md:w-1/2 flex flex-col justify-center">
+            <h1 class="font-lexend-giga font-bold text-white text-2xl md:text-3xl text-center">ENCONTRE A HERMANN MAIS PRÓXIMA DE VOCÊ</h1>
+            <div id="descricao" class="mt-4">
+              <p class="font-lexend-giga text-white text-center text-sm">
+                Hermann oferece um atendimento especializado por todo o território nacional. Seu carro dos sonhos perto de você.
+              </p>
+              <!-- Adicionando Pesquisa -->
+              <form class="max-w-md mx-auto mt-6 sobre">   
+                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Digite seu CEP" required />
+                    <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Procurar</button>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Seção do Footer!-->
+      <div class="sm:mt-40 md:mt-0 flex flex-col items-end w-full text-gray-700 bg-black body-font">
+          <div
+            class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap text-white">
+            <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+              <p class="mt-2 text-2xl text-white font-bold font-lexend-giga">HERMANN</p>
+              <div class="mt-4">
+                <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      class="w-5 h-5" viewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                      </path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+                <p class="mt-3 text-sm text-gray-500">© 2024 - HERMANN</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-lg tracking-widest text-white font-bold uppercase title-font">Sobre</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Loja</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Modelos</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Blog</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-lg tracking-widest uppercase title-font font-bold">SUPORTE</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Assistência</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-lg tracking-widest uppercase title-font font-bold">PLATAFORMA</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Termos & Privacidade</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-lg tracking-widest uppercase title-font font-bold">CONTATO</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">(XX) XXXXX-XXXX</a>
+                  </li>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- Linha adicional para "Desenvolvido por CoretTech" -->
+          <div class="bottom-0 right-0 p-4 flex items-center">
+            <p class="text-base text-slate-200 font-lexend-giga mr-2">Desenvolvido por</p>
+            <img src="src/content/coretech-logo.svg" alt="CoreTech Logo" class="h-15">
+          </div>
+      </div>      
+    </main>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="src/script/index.js"></script>
+<script src="node_modules/swiper/swiper-bundle.min.js"></script>
+<script src="src/script/carrossel.js"></script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+<script src="https://kit.fontawesome.com/c2b79f7247.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.efeito2 {
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.efeito2:hover {
+    transform: scale(1.1);
+}
+
+.swiper {
+  width: 100%;
+  max-width: 800px; /* Ajuste o tamanho máximo do carrossel */
+  height: 700px;
+  margin: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide .max-w-lg {
+  margin: auto;
+}
+
+.max-w-lg {
+  max-width: 300px; /* Ajuste o tamanho máximo do card */
+}
+
+#botao{
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+#botao:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px; /* largura da barra de rolagem */
+}
+
+/* Estilo do botão da barra de rolagem */
+::-webkit-scrollbar-button {
+  background-color: #ccc; /* cor de fundo do botão */
+}
+
+/* Estilo do trilho da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* cor de fundo do trilho */
+}
+
+/* Estilo do polegar (a parte da barra de rolagem que você pode arrastar) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* cor de fundo do polegar */
+  border-radius: 4px; /* borda arredondada */
+}
+
+/* Estilo do canto inferior direito da barra de rolagem */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1; /* cor de fundo */
+}
+
+/* Estilo do trilho quando o mouse está sobre a barra de rolagem */
+::-webkit-scrollbar-track:hover {
+  background-color: #eaeaea; /* cor de fundo do trilho ao passar o mouse sobre */
+}
+
+/* Estilo do polegar quando o mouse está sobre a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* cor de fundo do polegar ao passar o mouse sobre */
+}
+
+.efeito {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.efeito:hover {
+  transform: scale(1.05);
+}
+
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+.group-hover\:block {
+  display: none;
+}
+

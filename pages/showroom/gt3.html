@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hermann</title>
+    <link rel="stylesheet" href="/src/style/input.css" />
+    <link rel="stylesheet" href="/src/style/output.css"/>
+    <link rel="stylesheet" href="/src/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="node_modules/swiper/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <!--Navbar-->
+  <nav class="bg-black relative z-10">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <h1 class="text-gray-50 text-bold text-2xl sm:text-5xl md:text-6xl font-lexend-giga text-center">Hermann</h1>
+        <button id="hamburger-btn" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                <li><a href="/index.html" class="font-lexend-giga block py-2 px-3 text-white bg-blue-700 rounded md:hover:text-blue-700  md:bg-transparent md:p-0  dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Início</a></li>
+                <li class="relative group">
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="font-lexend-giga flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto ">Marcas
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div class='absolute shadow-lg bg-black top-full left-0 w-full z-50 max-h-0 overflow-y-auto group-hover:opacity-100 group-hover:max-h-[350px] group-hover:h-auto transition-all duration-500 flex flex-col items-center'
+                        style="touch-action: pan-y;">
+                        <a href="pagina-da-ferrari.html">
+                            <img src="/src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-mercedes.html">
+                            <img src="/src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="/pages/brands/porsche.html">
+                            <img src="/src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-lamborghini.html">
+                            <img src="/src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-audi.html">
+                            <img src="/src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
+                        </a>
+                        <a href="pagina-da-bmw.html">
+                            <img src="/src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
+                        </a>
+                    </div>
+                </li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Serviços & Manutenções</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre a loja</a></li>
+            </ul>
+        </div>
+        <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+    </div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black text-white sidebar hidden">
+        <div class="p-4">
+            <h2 class="text-2xl font-bold">Menu</h2>
+            <ul class="mt-4 space-y-2">
+                <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded text-2xl font-lexend-giga text-white">Início</a></li>
+                <li class="relative group">
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-lexend-giga">Marcas
+                      <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                      </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div class='absolute shadow-lg bg-black top-full left-0 w-full z-50 max-h-0 overflow-y-auto group-hover:opacity-100 group-hover:max-h-[350px] group-hover:h-auto transition-all duration-500 flex flex-col items-center'
+                  style="touch-action: pan-y;">
+                  <a href="pagina-da-ferrari.html">
+                      <img src="/src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-mercedes.html">
+                      <img src="/src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="/pages/brands/porsche.html">
+                      <img src="/src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-lamborghini.html">
+                      <img src="/src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-audi.html">
+                      <img src="/src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
+                  </a>
+                  <a href="pagina-da-bmw.html">
+                      <img src="/src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
+                  </a>
+              </li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Serviços & Manutenções</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Contato</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Sobre a loja</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main>
+    <section id="car-showroom ">
+     <!-- Container -->
+    <div class="container mx-auto py-4 px-4 md:px-16">
+
+        <div class="brand__title mt-24 mb-[-55px] md:my-20 lg:my-6">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl text-gray-800 uppercase">Porsche 911</h1>
+            <p class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-600 uppercase">GT3 RS</p>
+            <span class="ml-4 md:ml-16 text-gray-500">525cv</span>
+        </div>
+
+        <div class="car mt-[-50px] md:mt-[-300px]">
+            <img src="src/gt3.png" alt="Car" class="w-full md:ml-24" />
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center items-center mt-4">
+        <div class="model bg-black text-white p-6 md:p-4 md:min-w-[80px] rounded inicio">
+            <p class="text-slate-200 font-bold mb-1">Preço</p>
+            <span class="text-gray-300">R$ 1.890.000</span>
+        </div>
+        <div class="max__speed bg-black text-white p-6 md:p-4 md:min-w-[80px] rounded inicio">
+            <p class="text-slate-200 font-bold mb-1">Velocidade Máxima</p>
+            <span class="text-gray-300 text-center">330km / h</span>
+        </div>
+        <div class="acceleration bg-black text-white p-6 md:p-4 md:min-w-[80px] rounded inicio">
+            <p class="text-slate-200 font-bold mb-1">Aceleração</p>
+            <span class="text-gray-300">0 a 100km/h em 2.7s</span>
+        </div>
+     </div>
+
+        <!-- Visuaização 3D-->        
+        <div class="flex justify-center items-center mt-10 inicio">
+            <h2 class="font-lexend-giga text-4xl font-bold">Visualização 3D</h2>
+        </div>
+        <div class="flex justify-center items-center mt-8 inicio">
+            <model-viewer src="/src/models/porsche_gt3_rs.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls style="width: 1440px; height: 500px; border-radius: 25px;" class="bg-black"></model-viewer>
+        </div>
+    </section>
+      <section id="sobre" class="bg-gray-900 w-full mt-24 pb-16 md:pb-6"> <!-- Ajuste a altura mínima da tela -->
+        <div class="flex flex-col md:flex-row justify-around items-start gap-8 p-4 h-full sobre">
+          <div id="empresa" class="w-full md:w-1/2 flex flex-col justify-center">
+            <h1 class="font-lexend-giga font-bold text-white text-2xl md:text-3xl mb-4 text-center">SOBRE A EMPRESA</h1>
+            <p class="font-lexend-giga text-white text-center text-sm mt-4">
+              A Hermann redefine a experiência de possuir carros de luxo, oferecendo uma seleção exclusiva das marcas mais prestigiadas. Com uma abordagem personalizada e uma plataforma online inovadora, garante uma experiência única do showroom à compra, destacando-se pela excelência, inovação e qualidade.
+            </p>
+          </div>
+          <div id="localizacao" class="w-full md:w-1/2 flex flex-col justify-center">
+            <h1 class="font-lexend-giga font-bold text-white text-2xl md:text-3xl text-center">ENCONTRE A HERMANN MAIS PRÓXIMA DE VOCÊ</h1>
+            <div id="descricao" class="mt-4">
+              <p class="font-lexend-giga text-white text-center text-sm">
+                Hermann oferece um atendimento especializado por todo o território nacional. Seu carro dos sonhos perto de você.
+              </p>
+              <!-- Adicionando Pesquisa -->
+              <form class="max-w-md mx-auto mt-6 sobre">   
+                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Digite seu CEP" required />
+                    <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Procurar</button>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Seção do Footer!-->
+      <div class="sm:mt-40 md:mt-0 flex flex-col items-end w-full text-gray-700 bg-black body-font">
+          <div
+            class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap text-white">
+            <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+              <p class="mt-2 text-2xl text-white font-bold font-lexend-giga">HERMANN</p>
+              <div class="mt-4">
+                <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      class="w-5 h-5" viewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                      </path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+                <p class="mt-3 text-sm text-gray-500">© 2024 - HERMANN</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-lg tracking-widest text-white font-bold uppercase title-font">Sobre</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Loja</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Modelos</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Blog</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-lg tracking-widest uppercase title-font font-bold">SUPORTE</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Assistência</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-lg tracking-widest uppercase title-font font-bold">PLATAFORMA</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">Termos & Privacidade</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-lg tracking-widest uppercase title-font font-bold">CONTATO</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-400 cursor-pointer hover:text-gray-500">(XX) XXXXX-XXXX</a>
+                  </li>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- Linha adicional para "Desenvolvido por CoretTech" -->
+          <div class="bottom-0 right-0 p-4 flex items-center">
+            <p class="text-base text-slate-200 font-lexend-giga mr-2">Desenvolvido por</p>
+            <img src="/src/content/coretech-logo.svg" alt="CoreTech Logo" class="h-15">
+          </div>
+      </div>      
+</main>
+<script src="https://unpkg.com/scrollreveal"></script>
+</body>
+<script src="/src/script/index.js"></script>
+<script src="https://kit.fontawesome.com/c2b79f7247.js" crossorigin="anonymous"></script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</html>
