@@ -4,11 +4,11 @@
     box-sizing: border-box;
   }
 
-  .card {
+.efeito2 {
     transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.card:hover {
+.efeito2:hover {
     transform: scale(1.1);
 }
 
@@ -77,11 +77,11 @@
   background-color: #555; /* cor de fundo do polegar ao passar o mouse sobre */
 }
 
-.card2 {
+.efeito {
   transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.card2:hover {
+.efeito:hover {
   transform: scale(1.05);
 }
 
@@ -93,3 +93,16 @@
   display: none;
 }
 
+ @property --num {
+        syntax: '<integer>';
+        initial-value: 0;
+        inherits: true;
+    }
+    @keyframes counter {
+        from {
+            --num: 0;
+        }
+        to {
+            --num: 330;
+        }
+    }    

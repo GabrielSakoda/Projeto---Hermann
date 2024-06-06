@@ -29,7 +29,7 @@
             <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                 <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Início</a></li>
                 <li class="relative group">
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="font-lexend-giga flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Marcas
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="font-lexend-giga flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Marcas
                         <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                         </svg>
@@ -57,9 +57,9 @@
                         </a>
                     </div>
                 </li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Serviços & Manutenções</a></li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a></li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre a loja</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Serviços & Manutenções</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a></li>
+                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre a loja</a></li>
             </ul>
         </div>
         <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
@@ -118,19 +118,19 @@
             <img src="src/content/logo.png" alt="logo hermann">
         </div>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 inicio">
-            <div class="relative card2">
+            <div class="relative efeito">
                 <img src="src/content/numero-um.png" alt="Sobre">
                 <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-xl">
                     Conheça a número um do mercado <i class="fas fa-arrow-right"></i>
                 </h2>
             </div>
-            <div class="relative card2">
+            <div class="relative efeito">
                 <img src="src/content/serviços.png" alt="Serviços">
                 <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-xl">
                     Os melhores serviços <i class="fas fa-arrow-right"></i>
                 </h2>
             </div>
-            <div class="relative card2">
+            <div class="relative efeito">
                 <img src="src/content/corretores.png" alt="Corretores">
                 <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-xl">
                     Agende com os melhores corretores <i class="fas fa-arrow-right"></i>
@@ -164,35 +164,47 @@
       </div>
       <div class="border-b border-black mt-8"></div>
     </section>    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mx-auto max-w-[960px] relative mt-16">
-        <!-- Linha 1 -->
-        <a href="/pages/showroom/911.html" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer inicio">
-            <img src="src/content/911.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-            <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">911</h2>
-        </a>
-        <a href="/huracan" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer inicio">
-            <img src="src/content/huracan.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-            <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">Huracan</h2>
-        </a>
-        <a href="/c63" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer inicio">
-            <img src="src/content/c63.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-            <h2 class="text-center absolute bottom-0 left-0 right-0  text-white text-bold font-lexend-giga text-3xl">C63</h2>
-        </a>
-        
-        <!-- Linha 2 -->
-        <a href="/m3" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer inicio">
-            <img src="src/content/m3.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-            <h2 class="text-center absolute bottom-0 left-0 right-0  text-white text-bold font-lexend-giga text-3xl">M3</h2>
-        </a>
-        <a href="/488" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer inicio">
-            <img src="src/content/488.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-            <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">488</h2>
-        </a>
-        <a href="/r8" class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative card cursor-pointer inicio">
-            <img src="src/content/r8.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-            <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">R8</h2>
-        </a>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mx-auto max-w-[960px] relative mt-16 inicio">
+      <!-- Linha 1 -->
+      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+          <a href="/pages/showroom/911.html">
+              <img src="src/content/911.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">911</h2>
+          </a>
       </div>
+      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+          <a href="/huracan">
+              <img src="src/content/huracan.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">Huracan</h2>
+          </a>
+      </div>
+      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+          <a href="/c63">
+              <img src="src/content/c63.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">C63</h2>
+          </a>
+      </div>
+      
+      <!-- Linha 2 -->
+      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+          <a href="/m3">
+              <img src="src/content/m3.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">M3</h2>
+          </a>
+      </div>
+      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+          <a href="/488">
+              <img src="src/content/488.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">488</h2>
+          </a>
+      </div>
+      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+          <a href="/r8">
+              <img src="src/content/r8.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">R8</h2>
+          </a>
+      </div>
+  </div>  
      <section id="blog">
         <div class="bg-[#354C50] w-full mt-20 justify-center items-center flex flex-col md:flex-row">
           <!-- Slider main container -->
@@ -276,11 +288,11 @@
             <div class="swiper-scrollbar"></div>
           </div>      
           <div class="text-center md:text-left inicio">
-            <div class="flex flex-col md:items-start items-center">
-              <h1 class="font-lexend-giga font-bold text-4xl text-white mb-5">FIQUE POR DENTRO DAS NOVIDADES!</h1>
+            <div class="flex flex-col md:items-start items-center ml-16">
+              <h1 class="font-lexend-giga font-bold md:text-4xl text-white mb-5 sm:text-2x">FIQUE POR DENTRO DAS NOVIDADES!</h1>
               <p class="font-lexend-giga text-xl text-white md:mb-0 max-w-[550px]">RECEBA NOVIDADES EM SEU E-MAIL</p>
               <form class="w-full max-w-lg mt-5 flex">
-                <div class="relative flex-grow">
+                <div class="relative flex-grow ">
                   <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
                       <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
@@ -289,24 +301,24 @@
                   </div>
                   <input type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-3 dark:bg-white dark:placeholder-gray-400 dark:text-gray-700 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite seu e-mail">
                 </div>
-                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500">Enviar</button>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 md:mb-0 sm:mb-12">Enviar</button>
               </form>
             </div>
           </div>
         </div>      
       </section> 
-      <section id="sobre" class="bg-gray-900 w-full mt-24 pb-16 md:pb-24 "> <!-- Ajuste a altura mínima da tela -->
-        <div class="flex flex-col md:flex-row justify-around items-start gap-4 p-4 h-full sobre">
+      <section id="sobre" class="bg-gray-900 w-full mt-24 md:pb-12"> <!-- Ajuste a altura mínima da tela -->
+        <div class="flex flex-col md:flex-row justify-around items-start gap-16 p-2 h-full sobre">
           <div id="empresa" class="w-full md:w-1/2 flex flex-col justify-center">
             <h1 class="font-lexend-giga font-bold text-white text-2xl md:text-3xl mb-4 text-center">SOBRE A EMPRESA</h1>
-            <p class="font-lexend-giga text-white text-center text-lg mt-6">
+            <p class="font-lexend-giga text-white text-center text-sm mt-4">
               A Hermann redefine a experiência de possuir carros de luxo, oferecendo uma seleção exclusiva das marcas mais prestigiadas. Com uma abordagem personalizada e uma plataforma online inovadora, garante uma experiência única do showroom à compra, destacando-se pela excelência, inovação e qualidade.
             </p>
           </div>
           <div id="localizacao" class="w-full md:w-1/2 flex flex-col justify-center">
             <h1 class="font-lexend-giga font-bold text-white text-2xl md:text-3xl text-center">ENCONTRE A HERMANN MAIS PRÓXIMA DE VOCÊ</h1>
             <div id="descricao" class="mt-4">
-              <p class="font-lexend-giga text-white text-center text-lg">
+              <p class="font-lexend-giga text-white text-center text-sm">
                 Hermann oferece um atendimento especializado por todo o território nacional. Seu carro dos sonhos perto de você.
               </p>
               <!-- Adicionando Pesquisa -->
