@@ -38,7 +38,7 @@ ScrollReveal().reveal('.sobre', {
 });
 
 ScrollReveal().reveal('.inicio', {
-  delay: 300,
+  delay: 200,
   distance: '50px',
   easing: 'ease-in-out',
   origin: 'bottom',
