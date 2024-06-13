@@ -58,7 +58,7 @@
                         </a>
                     </div>
                 </li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Serviços & Manutenções</a></li>
+                <li><a href="servicos.html" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Serviços & Manutenções</a></li>
                 <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a></li>
                 <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre a loja</a></li>
             </ul>
@@ -70,7 +70,7 @@
         <div class="p-4">
             <h2 class="text-2xl font-bold">Menu</h2>
             <ul class="mt-4 space-y-2">
-                <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded text-2xl font-lexend-giga text-white">Início</a></li>
+                <li><a href="index.html" class="block py-2 px-4 hover:bg-gray-700 rounded text-2xl font-lexend-giga text-white">Início</a></li>
                 <li class="relative group">
                   <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-lexend-giga">Marcas
                       <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -99,7 +99,7 @@
                       <img src="/src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
                   </a>
               </li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Serviços & Manutenções</a></li>
+                <li><a href="servicos.html" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Serviços & Manutenções</a></li>
                 <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Contato</a></li>
                 <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Sobre a loja</a></li>
             </ul>
@@ -108,16 +108,61 @@
 </nav>
 <main>
     <section>
-        <div id="banner" class="relative w-full h-[500px] inicio">
-            <img src="src/content/serviços-banner.png" alt="Porsche" class="absolute inset-0 w-full h-full object-cover">
-        </div>
-    </section>
-    <section id="servicos">
-        <div>
-            <div>
-                
+          <div id="banner" class="relative w-full h-[500px] inicio">
+              <img src="src/content/serviços-banner.png" alt="serviços" class="absolute inset-0 w-full h-full object-cover">
+          </div>
+      </section>
+      <div class="bg-black inline-block p-3 sm:p-6 lg:px-28 mt-12 inicio">
+        <h1 class="font-lexend-giga text-xl sm:text-4xl text-white text-center sm:text-left">Serviços &<br>Manutenções</h1>
+      </div>
+      <div id="atualizacoes" class="flex flex-col sm:flex-row items-center justify-center lg:justify-between mx-auto my-12 px-4 space-y-4 sm:space-y-0 sm:space-x-4 inicio">
+        <div class="flex-1 lg:px-8 mb-8 lg:mb-0 text-center sm:text-left">
+            <h2 class="font-lexend-giga font-bold text-2xl sm:text-4xl">Atualizações</h2>
+            <div class="flex-none mt-6 sm:mt-0 sm:w-auto mx-auto sm:mx-0">
+              <img src="src/content/serviços1-desk.png" alt="atualizações" class="block sm:hidden max-w-full h-auto mx-auto">
             </div>
+            <p class="font-lexend-giga sm:font-light text-bs mt-8 sm:text-2xl">
+                Manter seu carro atualizado garante desempenho, segurança e valor de revenda. Isso envolve seguir a manutenção regular, atualizar softwares e substituir peças desgastadas por componentes de qualidade.
+            </p>
+            <button onclick="location.href='#'" class="bg-red-600 text-white font-bold sm:text-2xl py-2 px-8 rounded hover:bg-red-700 transition duration-300 ease-in-out mt-12">
+                Saiba mais
+            </button>
         </div>
+        <div class="flex-none w-1/2 sm:w-auto mx-auto sm:mx-0">
+            <img src="src/content/serviços1.png" alt="atualizações" class="hidden sm:block max-w-full h-auto">
+        </div>
+      </div>
+      <div id="consulta" class="flex flex-col sm:flex-row items-center justify-center lg:justify-between mx-auto my-12 px-4 space-y-4 sm:space-y-0 sm:space-x-4 inicio">
+        <div class="flex-none mt-6 sm:mt-0 sm:w-auto mx-auto sm:mx-0">
+          <img src="src/content/serviços2.png" alt="atualizações" class="hidden sm:block max-w-full h-auto">
+          <img src="src/content/serviços2-desk.png" alt="atualizações" class="block sm:hidden max-w-full h-auto">
+        </div>
+        <div class="flex-1 lg:px-8 mb-8 lg:mb-0 text-center sm:text-left">
+            <h2 class="font-lexend-giga font-bold text-2xl sm:text-4xl">Serviços & Peças Originais</h2>
+            <p class="font-lexend-giga sm:font-light text-bs mt-8 sm:text-2xl">Oferecemos serviços e peças originais de qualidade para garantir o melhor desempenho e durabilidade do seu carro. Nossos técnicos qualificados e equipamentos de última geração garantem eficiência e precisão em cada serviço. Confie em nós para manter seu veículo em ótimas condições.
+            </p>
+            <button onclick="location.href='#'" class="bg-red-600 text-white font-bold sm:text-2xl py-2 px-8 rounded hover:bg-red-700 transition duration-300 ease-in-out mt-12">
+                Saiba mais
+            </button>
+        </div>
+      </div>
+      <div id="consulta" class="flex flex-col sm:flex-row items-center justify-center lg:justify-between mx-auto my-12 px-4 space-y-4 sm:space-y-0 sm:space-x-4 inicio">
+        <div class="flex-1 lg:px-8 mb-8 lg:mb-0 text-center sm:text-left">
+            <h2 class="font-lexend-giga font-bold text-2xl sm:text-4xl">Consulta automotiva</h2>
+            <div class="flex-none mt-6 sm:mt-0 sm:w-auto mx-auto sm:mx-0">
+              <img src="src/content/serviços3-desk.png" alt="atualizações" class="block sm:hidden max-w-full h-auto">
+            </div>
+            <p class="font-lexend-giga sm:font-light text-bs mt-8 sm:text-2xl">
+              Nossa consulta automotiva oferece uma análise completa do seu veículo, identificando problemas e fornecendo soluções precisas. Com especialistas e tecnologia avançada, garantimos recomendações personalizadas para manter seu carro em ótimas condições.
+            </p>
+            <button onclick="location.href='#'" class="bg-red-600 text-white font-bold sm:text-2xl py-2 px-8 rounded hover:bg-red-700 transition duration-300 ease-in-out mt-12">
+                Saiba mais
+            </button>
+        </div>
+        <div class="flex-none w-1/2 sm:w-auto mx-auto sm:mx-0">
+            <img src="src/content/serviços-3.png" alt="atualizações" class="hidden sm:block max-w-full h-auto">
+        </div>
+      </div>
     </section>
       <!--Seção do Footer!-->
       <div class="sm:mt-40 md:mt-2 flex flex-col items-end w-full text-gray-700 bg-black body-font">

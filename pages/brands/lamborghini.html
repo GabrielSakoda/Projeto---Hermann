@@ -17,95 +17,95 @@
 </head>
 <body>
     <!--Navbar-->
-  <nav class="bg-black relative z-10">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <h1 class="text-gray-50 text-bold text-2xl sm:text-5xl md:text-6xl font-lexend-giga text-center">HERMANN</h1>
-        <button id="hamburger-btn" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-                <li><a href="/index.html" class="font-lexend-giga block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0  dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Início</a></li>
-                <li class="relative group">
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="font-lexend-giga flex items-center justify-between w-full py-2 px-3 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto ">Marcas
+    <nav class="bg-black relative z-10">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <h1 class="text-gray-50 text-bold text-2xl sm:text-5xl md:text-6xl font-lexend-giga text-center">HERMANN</h1>
+          <button id="hamburger-btn" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+              <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                  <li><a href="/index.html" class="font-lexend-giga block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0  dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Início</a></li>
+                  <li class="relative group">
+                      <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="font-lexend-giga flex items-center justify-between w-full py-2 px-3 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto ">Marcas
+                          <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                          </svg>
+                      </button>
+                      <!-- Dropdown menu -->
+                      <div class='absolute shadow-lg bg-black top-full left-0 w-full z-50 max-h-0 overflow-y-auto group-hover:opacity-100 group-hover:max-h-[350px] group-hover:h-auto transition-all duration-500 flex flex-col items-center'
+                          style="touch-action: pan-y;">
+                          <a href="/pages/brands/ferrari.html">
+                              <img src="/src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
+                          </a>
+                          <a href="/pages/brands/mercedes.html">
+                              <img src="/src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
+                          </a>
+                          <a href="/pages/brands/porsche.html">
+                              <img src="/src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
+                          </a>
+                          <a href="/pages/brands/lamborghini.html">
+                              <img src="/src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
+                          </a>
+                          <a href="/pages/brands/audi.html">
+                              <img src="/src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
+                          </a>
+                          <a href="/pages/brands/bmw.html">
+                              <img src="/src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
+                          </a>
+                      </div>
+                  </li>
+                  <li><a href="/servicos.html" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Serviços & Manutenções</a></li>
+                  <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a></li>
+                  <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre a loja</a></li>
+              </ul>
+          </div>
+          <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
+      </div>
+      <!-- Sidebar -->
+      <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black text-white sidebar hidden">
+          <div class="p-4">
+              <h2 class="text-2xl font-bold">Menu</h2>
+              <ul class="mt-4 space-y-2">
+                  <li><a href="/index.html" class="block py-2 px-4 hover:bg-gray-700 rounded text-2xl font-lexend-giga text-white">Início</a></li>
+                  <li class="relative group">
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-lexend-giga">Marcas
                         <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                         </svg>
                     </button>
                     <!-- Dropdown menu -->
                     <div class='absolute shadow-lg bg-black top-full left-0 w-full z-50 max-h-0 overflow-y-auto group-hover:opacity-100 group-hover:max-h-[350px] group-hover:h-auto transition-all duration-500 flex flex-col items-center'
-                        style="touch-action: pan-y;">
-                        <a href="/pages/brands/ferrari.html">
-                            <img src="/src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
-                        </a>
-                        <a href="/pages/brands/mercedes.html">
-                            <img src="/src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
-                        </a>
-                        <a href="/pages/brands/porsche.html">
-                            <img src="/src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
-                        </a>
-                        <a href="/pages/brands/lamborghini.html">
-                            <img src="/src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
-                        </a>
-                        <a href="/pages/brands/audi.html">
-                            <img src="/src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
-                        </a>
-                        <a href="/pages/brands/bmw.html">
-                            <img src="/src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
-                        </a>
-                    </div>
+                    style="touch-action: pan-y;">
+                    <a href="/pages/brands/ferrari.html">
+                        <img src="/src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
+                    </a>
+                    <a href="/pages/brands/mercedes.html">
+                        <img src="/src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
+                    </a>
+                    <a href="/pages/brands/porsche.html">
+                        <img src="/src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
+                    </a>
+                    <a href="/pages/brands/lamborghini.html">
+                        <img src="/src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
+                    </a>
+                    <a href="/pages/brands/audi.html">
+                        <img src="/src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
+                    </a>
+                    <a href="/pages/brands/bmw.html">
+                        <img src="/src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
+                    </a>
                 </li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Serviços & Manutenções</a></li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a></li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre a loja</a></li>
-            </ul>
-        </div>
-        <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden"></div>
-    </div>
-    <!-- Sidebar -->
-    <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black text-white sidebar hidden">
-        <div class="p-4">
-            <h2 class="text-2xl font-bold">Menu</h2>
-            <ul class="mt-4 space-y-2">
-                <li><a href="#" class="block py-2 px-4 hover:bg-gray-700 rounded text-2xl font-lexend-giga text-white">Início</a></li>
-                <li class="relative group">
-                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent font-lexend-giga">Marcas
-                      <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                      </svg>
-                  </button>
-                  <!-- Dropdown menu -->
-                  <div class='absolute shadow-lg bg-black top-full left-0 w-full z-50 max-h-0 overflow-y-auto group-hover:opacity-100 group-hover:max-h-[350px] group-hover:h-auto transition-all duration-500 flex flex-col items-center'
-                  style="touch-action: pan-y;">
-                  <a href="/pages/brands/ferrari.html">
-                      <img src="/src/content/ferrari-logo.svg" alt="Ferrari" class="w-16 h-auto mb-4">
-                  </a>
-                  <a href="pagina-da-mercedes.html">
-                      <img src="/src/content/mercedes-logo.svg" alt="Mercedes" class="w-16 h-auto mb-4">
-                  </a>
-                  <a href="/pages/brands/porsche.html">
-                      <img src="/src/content/porsche-logo.svg" alt="Porsche" class="w-16 h-auto mb-4">
-                  </a>
-                  <a href="/pages/brands/lamborghini.html">
-                      <img src="/src/content/lamborghini-logo.svg" alt="Lamborghini" class="w-16 h-auto mb-4">
-                  </a>
-                  <a href="pagina-da-audi.html">
-                      <img src="/src/content/audi-logo.svg" alt="Audi" class="w-16 h-auto mb-4">
-                  </a>
-                  <a href="pagina-da-bmw.html">
-                      <img src="/src/content/bmw-logo.svg" alt="BMW" class="w-16 h-auto mb-4">
-                  </a>
-              </li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Serviços & Manutenções</a></li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Contato</a></li>
-                <li><a href="#" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Sobre a loja</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+                  <li><a href="/servicos.html" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Serviços & Manutenções</a></li>
+                  <li><a href="/contato.html" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Contato</a></li>
+                  <li><a href="/sobre.html" class="font-lexend-giga block py-2 px-4 text-white hover:bg-gray-700 rounded text-2xl">Sobre a loja</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
 <main>
     <section>
         <div id="banner" class="relative w-full h-[500px] inicio">
