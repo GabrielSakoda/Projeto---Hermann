@@ -14,7 +14,7 @@
 
 .swiper {
   width: 100%;
-  max-width: 800px; /* Ajuste o tamanho máximo do carrossel */
+  max-width: 600px; /* Ajuste o tamanho máximo do carrossel */
   height: 700px;
   margin: auto;
 }
