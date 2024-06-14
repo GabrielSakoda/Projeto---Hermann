@@ -15,6 +15,7 @@
   href="node_modules/swiper/swiper-bundle.min.css"
 />
   <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.css">
+  <link rel="icon" type="image/x-icon" href="src/content/hermann-icon.svg">
 </head>
 <body>
   <nav class="bg-black relative z-10">
@@ -107,13 +108,15 @@
     </div>
 </nav>
     <main id="container">
-      <div class="relative bg-black">
+      <div class="relative w-full h-auto bg-black">
         <video class="w-full h-auto object-cover opacity-40" autoplay loop muted>
             <source src="/src/content/video-fundo.mp4" type="video/mp4">
         </video>
-        <div class="absolute bottom-0 left-0 mb-28 p-4">
+        <div class="absolute bottom-1 sm:bottom-10 left-0 p-4">
+            <h2 class="text-gray-50 text-bold text-base sm:text-6xl font-lexend-giga sm:mb-10">O luxo da emoção,<br> a precisão da<br> performance</h2>
+            <a href="#modelos" class="mt-4 inline-block px-6 py-2 text-sm sm:text-lg font-medium text-white bg-red-800 rounded-lg hover:bg-red-950 transition font-lexend-giga">Descubra mais</a>
         </div>
-       </div>
+      </div>
        <section id="sobre">
         <div class="flex justify-center items-center mt-20 inicio">
             <img src="src/content/logo.png" alt="logo hermann">
@@ -139,7 +142,7 @@
           </a>
       </div>      
     </section>
-    <section id="modelos">
+    <section id="marcas">
       <div class="flex justify-center items-center mt-14 inicio">
         <h1 class="font-lexend-giga text-4xl font-light">Marcas</h1>
       </div>
@@ -164,48 +167,50 @@
         </div>
       </div>
       <div class="border-b border-black mt-8"></div>
-    </section>    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mx-auto max-w-[960px] relative mt-16 inicio">
-      <!-- Linha 1 -->
-      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
-          <a href="/pages/showroom/911.html">
-              <img src="src/content/911.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">911</h2>
-          </a>
-      </div>
-      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
-          <a href="/huracan">
-              <img src="src/content/huracan.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">Huracan</h2>
-          </a>
-      </div>
-      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
-          <a href="/c63">
-              <img src="src/content/c63.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">C63</h2>
-          </a>
-      </div>
-      
-      <!-- Linha 2 -->
-      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
-          <a href="/m3">
-              <img src="src/content/m3.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">M3</h2>
-          </a>
-      </div>
-      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
-          <a href="/488">
-              <img src="src/content/488.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">488</h2>
-          </a>
-      </div>
-      <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
-          <a href="/r8">
-              <img src="src/content/r8.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
-              <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">R8</h2>
-          </a>
-      </div>
-  </div>  
+    </section>
+    <section id="modelos">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mx-auto max-w-[960px] relative mt-16 inicio">
+        <!-- Linha 1 -->
+        <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+            <a href="/pages/showroom/911.html">
+                <img src="src/content/911.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">911</h2>
+            </a>
+        </div>
+        <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+            <a href="/huracan">
+                <img src="src/content/huracan.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">Huracan</h2>
+            </a>
+        </div>
+        <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+            <a href="/c63">
+                <img src="src/content/c63.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">C63</h2>
+            </a>
+        </div>
+        
+        <!-- Linha 2 -->
+        <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+            <a href="/m3">
+                <img src="src/content/m3.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">M3</h2>
+            </a>
+        </div>
+        <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+            <a href="/488">
+                <img src="src/content/488.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">488</h2>
+            </a>
+        </div>
+        <div class="w-full md:w-[287px] max-w-full md:max-w-[287px] mt-4 relative efeito cursor-pointer">
+            <a href="/r8">
+                <img src="src/content/r8.svg" alt="" class="w-full h-auto max-w-full max-h-[383px]">
+                <h2 class="text-center absolute bottom-0 left-0 right-0 text-white text-bold font-lexend-giga text-3xl">R8</h2>
+            </a>
+        </div>
+    </div>  
+    </section>
      <section id="blog">
         <div class="bg-[#354C50] w-full mt-20 justify-center items-center flex flex-col md:flex-row">
           <!-- Slider main container -->

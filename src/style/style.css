@@ -107,4 +107,7 @@
         }
     }
 
+    html {
+      scroll-behavior: smooth;
+  }
   
