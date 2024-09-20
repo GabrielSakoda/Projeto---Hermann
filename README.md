@@ -14,3 +14,9 @@ Hermann é um projeto que visa criar um site elegante e responsivo para uma loja
 - **Página de Carro**: Detalhes completos sobre cada carro, incluindo especificações técnicas e opções de personalização.
 - **Galeria de Imagens**: Exibição de imagens de alta qualidade dos carros.
 - **Formulário de Contato**: Para que os clientes possam solicitar mais informações.
+
+## Como Executar o Projeto
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu_usuario/hermann.git
